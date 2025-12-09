@@ -30,7 +30,9 @@
           <a class="cta" href="https://discord.gg/sgcorp" target="_blank" rel="noopener noreferrer">Join Our Discord</a>
         </div>
         <div class="hero-right">
-          <div class="logo-box">STUMBLECORP</div>
+          <div class="logo-box">
+            <img src="images/stumblecorp.png" alt="StumbleCorp logo" class="logo-img">
+          </div>
         </div>
       </div>
     </section>
@@ -43,23 +45,23 @@
         <div class="panels">
           <article class="panel">
             <div class="avatar">R</div>
-            <h3>Rafe</h3>
-            <p class="role">Founder & Lead</p>
-            <p class="desc">Oversees direction and development, focusing on community safety and stability.</p>
+            <h3>Rax</h3>
+            <p class="role">Owner & Dev</p>
+            <p class="desc">Created StumbleCorp and Develops it.</p>
           </article>
 
           <article class="panel">
-            <div class="avatar">A</div>
-            <h3>Alice</h3>
-            <p class="role">Head Developer</p>
-            <p class="desc">Leads engineering and performance optimizations for both PC and Mobile.</p>
+            <div class="avatar">S</div>
+            <h3>Sxe</h3>
+            <p class="role">Head Owner & Server Manager</p>
+            <p class="desc">Leads the server and manages how the server runs.</p>
           </article>
 
           <article class="panel">
-            <div class="avatar">M</div>
-            <h3>Marcus</h3>
+            <div class="avatar">K</div>
+            <h3>Krowie</h3>
             <p class="role">Community Manager</p>
-            <p class="desc">Builds the community and moderates the servers, keeping things welcoming.</p>
+            <p class="desc">Builds the community and moderates the server keeping it alive.</p>
           </article>
         </div>
 
@@ -70,6 +72,29 @@
       <div class="container">© StumbleCorp</div>
     </footer>
   </main>
+
+  <script>
+    (function() {
+      // small snow generator: creates falling white dots
+      const count = 40;
+      for (let i = 0; i < count; i++) {
+        const flake = document.createElement('div');
+        flake.className = 'flake';
+        const size = Math.random() * 12 + 6; // px
+        const left = Math.random() * 100; // vw
+        const delay = Math.random() * 10; // s
+        const duration = 8 + Math.random() * 12; // s
+        const opacity = 0.4 + Math.random() * 0.6;
+        flake.style.width = size + 'px';
+        flake.style.height = size + 'px';
+        flake.style.left = left + 'vw';
+        flake.style.opacity = opacity;
+        flake.style.animationDelay = delay + 's';
+        flake.style.animationDuration = duration + 's';
+        document.body.appendChild(flake);
+      }
+    })();
+  </script>
 
 </body>
 </html>
