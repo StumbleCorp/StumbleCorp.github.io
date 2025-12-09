@@ -20,9 +20,11 @@ body{
 .header-inner{display:flex;align-items:center;gap:12px}
 .site-header{position:sticky;top:0;background:linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2));z-index:30;border-bottom:1px solid rgba(255,255,255,0.04)}
 .brand{font-weight:800;color:var(--accent);font-size:28px;letter-spacing:0.6px}
-.nav{margin-left:auto}
+.nav{margin-left:auto;display:flex;gap:10px;align-items:center}
 .nav-link{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
 .nav-link:hover{background:rgba(255,255,255,0.03)}
+.nav-link.download-btn{color:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700;border:1px solid rgba(255,255,255,0.08);display:inline-flex;align-items:center;gap:10px}
+.nav-link.download-btn:hover{background:rgba(255,255,255,0.04);transform:translateY(-4px)}
 
 .download-btn{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,0.08);transition:all .18s ease}
 .download-btn:hover{background:rgba(255,255,255,0.04);transform:translateY(-4px)}
