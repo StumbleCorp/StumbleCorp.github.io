@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Changelogs — StumbleCorp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .changelog-container { max-width: 800px; margin: 60px auto; padding: 24px; }
+    .changelog-entry { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding: 20px; border-radius: 12px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.03); }
+    .changelog-version { font-size: 24px; font-weight: 900; color: var(--accent); margin: 0 0 10px; }
+    .changelog-date { font-size: 12px; color: var(--muted-2); margin-bottom: 12px; }
+    .changelog-features { list-style: none; padding: 0; margin: 0; }
+    .changelog-features li { color: rgba(255,255,255,0.8); padding: 6px 0; padding-left: 20px; position: relative; }
+    .changelog-features li:before { content: "✓"; position: absolute; left: 0; color: rgba(255,255,255,0.5); }
+    .changelog-back { display: inline-block; margin-bottom: 30px; }
+    .changelog-back a { color: var(--accent); text-decoration: none; border: 1px solid rgba(255,255,255,0.08); padding: 8px 14px; border-radius: 20px; transition: all .16s ease; font-weight: 700; }
+    .changelog-back a:hover { background: rgba(255,255,255,0.03); transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">StumbleCorp</div>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="changelogs.html">Changelogs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="changelog-container">
+      <div class="changelog-back">
+        <a href="index.html">← Back to Home</a>
+      </div>
+
+      <h1 class="glow">Changelogs</h1>
+
+      <!-- Version 1.0 -->
+      <div class="changelog-entry">
+        <div class="changelog-version">v1.0</div>
+        <div class="changelog-date">Released December 9, 2025</div>
+        <ul class="changelog-features">
+          <li>Initial release of StumbleCorp</li>
+          <li>Black/Grey/White theme with Lilita One font</li>
+          <li>Animated snowflake background</li>
+          <li>Team staff panel showcase</li>
+          <li>Discord integration with server links</li>
+          <li>Responsive design for mobile and desktop</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© StumbleCorp</div>
+  </footer>
+
+  <script>
+    (function() {
+      // small snow generator: creates falling white dots
+      const count = 40;
+      for (let i = 0; i < count; i++) {
+        const flake = document.createElement('div');
+        flake.className = 'flake';
+        const size = Math.random() * 12 + 6; // px
+        const left = Math.random() * 100; // vw
+        const delay = Math.random() * 10; // s
+        const duration = 4 + Math.random() * 4; // 4s - 8s (shorter so flakes loop faster)
+        const opacity = 0.35 + Math.random() * 0.65;
+        flake.style.width = size + 'px';
+        flake.style.height = size + 'px';
+        flake.style.left = left + 'vw';
+        flake.style.top = '-' + Math.round(size) + 'px';
+        flake.style.opacity = opacity;
+        // use a single composed animation and negative delay so flakes appear immediately
+        const negDelay = -(Math.random() * duration);
+        flake.style.animation = `fall ${duration}s linear ${negDelay}s infinite`;
+        document.body.appendChild(flake);
+      }
+    })();
+  </script>
+
+</body>
+</html>
